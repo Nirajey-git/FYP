@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grace Patient Management System</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
+    <!-- Base Styling  -->
+    <link rel="stylesheet" href="assets/main/css/fonts.css">
+    <link rel="stylesheet" href="assets/main/css/style.css">
+</head>
+
+<body>
+    <div id="main-wrapper" class="show">
+
+
+        <!-- start logo components -->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="patientdashboard.html"> <img class="logo-tabib" src="assets/images/download.png" alt=""></a>
+                <a href="patientdashboard.html"><img class="brand-title" src="assets/images/Grace1.png" alt=""></a>
+            </div>
+        </div>
+        <!-- End logo components -->
+
+
+        <!-- start section sidebar -->
+        <aside class="left-panel nicescroll-box">
+            <nav class="navigation">
+                <ul class="list-unstyled main-menu">
+                    <li class="has-submenu">
+                        <a href="patientdashboard.html">
+                            <i class="fas fa-th-large"></i>
+                            <span class="nav-label">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#" class="has-arrow mm-collapsed">
+                            <i class="fas fa-user-md"></i>
+                            <span class="nav-label">Doctors</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="doctor-list.html">All Doctors</a></li>
+                            <li> <a href="doctor-profile.html">Doctors Profile</a> </li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="appointment.html">
+                            <i class="fas fa-calendar-plus"></i>
+                            <span class="nav-label">Appointment</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="reports.html">
+                            <i class="fas fa-chart-pie"></i>
+                            <span class="nav-label">History</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#" class="has-arrow mm-collapsed">
+                            <i class="fas fa-cog"></i>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                        <ul class="list-unstyled mm-collapse">
+                            <li><a href="patient-settings.html">Patient Settings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- End section sidebar -->
+
+
+        <!-- start section header -->
+        <div class="header">
+            <header class="top-head container-fluid">
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="line"></span><span class="line"></span><span class="line"></span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="fullscreen notification_dropdown">
+                        <div class="full">
+                            <a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="my-account-wrapper">
+                        <div class="account-wrapper">
+                            <div class="account-control">
+                                <a class="login header-profile" href="#" title="Sign in">
+                                    <div class="header-info">
+                                        <span>Mr.Sanjeev</span>
+                                    </div>
+                                    <img src="assets/images/patient1.png" alt="people">
+                                </a>
+                                <div class="account-dropdown-form dropdown-container">
+                                    <div class="form-content">
+                                        <a href="patient-settings.html">
+                                            <i class="far fa-user"></i>
+                                            <span class="ml-2">Profile</span>
+                                        </a>
+                                        <a href="page-login-one.html">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            <span class="ml-2">Logout </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- End section header -->
+
+
+
+        <div class="content-body">
+            <div class="warper container-fluid">
+                <div class="doctorino_settings main_container">
+                    <div class="row page-titles mx-0">
+                        <div class="col-sm-6 p-md-0">
+                            <div class="welcome-text">
+                                <h4 class="text-primary">Patient Settings</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="patientdashboard.html">Home</a></li>
+                                <li class="breadcrumb-item active"><a href="/doctor-settings.html">Patient Settings</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header">
+                                    <h4 class="card-title"> Patient Settings </h4>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Name
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" placeholder="Ram">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Title <span
+                                                            class="text-danger">*</span></label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" placeholder="Dr. M Abdellaoui">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Address <span
+                                                            class="text-danger">*</span></label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" placeholder="address">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Phone<span
+                                                            class="text-danger">*</span></label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" placeholder="212658543469">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Hospital Email<span
+                                                            class="text-danger">*</span></label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" placeholder="tabibligne@gmail.com">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Currency<span
+                                                            class="text-danger">*</span></label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" placeholder="MAD">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">VAT<span
+                                                            class="text-danger">*</span></label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control" placeholder="VAT">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">Language</label>
+                                                    <div class="col-lg-6">
+                                                        <select class="form-control form-select">
+                                                            <option>English</option>
+                                                            <option>French</option>
+                                                            <option>English</option>
+                                                            <option>Spanish</option>
+                                                            <option>Dutch</option>
+                                                            <option>Bengali</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="col-xl-6">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label">APPT Interval</label>
+                                                    <div class="col-lg-6">
+                                                        <select class="form-control form-select">
+                                                            <option>30 mn</option>
+                                                            <option>10 mn</option>
+                                                            <option>15 mn</option>
+                                                            <option>20 mn</option>
+                                                            <option>25 mn</option>
+                                                            <option>30 mn</option>
+                                                            <option>35 mn</option>
+                                                            <option>40 mn</option>
+                                                            <option>45 mn</option>
+                                                            <option>50 mn</option>
+                                                            <option>55 mn</option>
+                                                            <option>60 mn</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Saturday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" class="form-control"></div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"><input type="time" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Sunday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"><input type="time" class="form-control"></div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Monday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" value="08:00" class="form-control"></div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" value="17:00" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Tuesday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" value="08:00" class="form-control"></div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" value="17:00" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Wednseday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="time" value="08:00" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"><input type="time" value="17:00" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Thurday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"><input type="time" value="08:00" class="form-control"></div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" value="17:00" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Friday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="time" value="08:00" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"><input type="time" value="17:00" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-11">
+                                                <div class="form-group"><button type="submit" class="btn btn-primary float-end">Save</button></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End section content -->
+
+
+        <!-- start section footer -->
+        <div class="footer">
+            <div class="copyright">
+                <p class="mb-0">Copyright © Designed &amp; Developed by <a href="uxign.com" target="_blank">Grace Patient Management System</a> 2021
+                </p>
+            </div>
+        </div>
+        <!-- End section footer -->
+
+
+    </div>
+
+
+    <!-- JQuery v3.5.1 -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- popper js -->
+    <script src="assets/plugins/popper/popper.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Moment -->
+    <script src="assets/plugins/moment/moment.min.js"></script>
+
+    <!-- Date Range Picker -->
+    <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Datatable -->
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/init-tdatatable.js"></script>
+
+    <!-- Main Custom JQuery -->
+    <script src="assets/js/toggleFullScreen.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

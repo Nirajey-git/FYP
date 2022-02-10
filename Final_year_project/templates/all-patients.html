@@ -1,0 +1,616 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+        <!-- start section content -->
+        <div class="content-body">
+            <div class="warper container-fluid">
+                <div class="all-patients main_container">
+                    <div class="row page-titles mx-0">
+                        <div class="col-sm-6 p-md-0">
+                            <div class="welcome-text">
+                                <h4 class="text-primary">New Patient</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active"><a href="new-patient.html">New Patient</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header fix-card">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h4 class="card-title"> All Patients </h4>
+                                        </div>
+                                        <div class="col-4 float-end">
+                                            <a href="/new-patient.html" class="btn btn-primary float-end">New
+                                                Patient</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="example2" class="display nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>First Name</th>
+                                                    <th>Last name</th>
+                                                    <th>Email</th>
+                                                    <th>Mobile No.</th>
+                                                    <th>Birthday</th>
+                                                    <th>Marital status</th>
+                                                    <th>Sex</th>
+                                                    <th>Blood Group</th>
+                                                    <th>Patient Weight</th>
+                                                    <th>Patient Height</th>
+                                                    <th>Address</th>
+                                                    <th>Patient History</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user1.jpg" alt=""></td>
+                                                    <td>Airi </td>
+                                                    <td>Satou</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user2.jpg" alt=""></td>
+                                                    <td>Angelica </td>
+                                                    <td>Ramos</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user3.jpg" alt=""></td>
+                                                    <td>Ashton</td>
+                                                    <td> Cox</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user4.jpg" alt=""></td>
+                                                    <td>Bradley </td>
+                                                    <td>Greer</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user5.jpg" alt=""></td>
+                                                    <td>Brenden </td>
+                                                    <td>Wagner</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user6.jpg" alt=""></td>
+                                                    <td>Brielle </td>
+                                                    <td>Williamson</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user7.jpg" alt=""></td>
+                                                    <td>Bruno</td>
+                                                    <td> Nash</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user8.jpg" alt=""></td>
+                                                    <td>Caesar </td>
+                                                    <td>Vance</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user9.jpg" alt=""></td>
+                                                    <td>Cara </td>
+                                                    <td>Stevens</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user10.jpg" alt=""></td>
+                                                    <td>Cedric </td>
+                                                    <td>Kelly </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user11.jpg" alt=""></td>
+                                                    <td>Charde </td>
+                                                    <td>Marshall</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user12.jpg" alt=""></td>
+                                                    <td>Colleen</td>
+                                                    <td> Hurst</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td>41</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="rounded-circle" width="35" src="assets/images/patients/user12.jpg" alt=""></td>
+                                                    <td>Daidai</td>
+                                                    <td> Rios</td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>658543469</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>Maried</td>
+                                                    <td>Male</td>
+                                                    <td>A +</td>
+                                                    <td>61</td>
+                                                    <td class="text-end">41</td>
+                                                    <td class="text-end">lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>lorem ipsum kwjhdkj jkdhjkfds</td>
+                                                    <td>
+                                                        <a class='mr-4 vue'>
+                                                            <span class='fa fa-eye' aria-hidden='true'></span>
+                                                        </a>
+                                                        <a data-bs-toggle='modal' data-bs-target='#modal-edit' class='mr-4'>
+                                                            <span class='fas fa-pencil-alt'></span>
+                                                        </a>
+                                                        <a class='mr-4 delet'>
+                                                            <span class='fas fa-trash-alt'></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End section content -->
+
+
+    <!-- Show data patient -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <!-- <div > -->
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel"><img class="rounded-circle" width="35" src="assets/images/patients/user1.jpg" alt=""> Tiger Nixon </h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="insertHere"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Show data patient -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-edit" tabindex="-1" aria-labelledby="modal-title-edit-row" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title-edit-row">Angelica Ramos</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="basic-form">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-xl-4">
+                                            <div class="form-group row widget-3">
+                                                <div class="col-lg-12">
+                                                    <div class="form-input">
+                                                        <label class="labeltest" for="file-ip-1">
+                                                            <span> Drop image here or click to upload. </span>
+                                                        </label>
+                                                        <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+                                                        <div class="preview">
+                                                            <img id="file-ip-1-preview" src="#" alt="img">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <div class="form-group row">
+                                                <div class="col-lg-12">
+                                                    <input type="text" class="form-control" placeholder="First Name">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-12">
+                                                    <input type="text" class="form-control" placeholder="Last name">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-12">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-12">
+                                                    <input type="text" class="form-control" placeholder="Mobile No.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <div class="form-group row">
+                                                <div class="col-lg-12">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Birthday">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-12">
+                                                    <select class="form-control form-select">
+                                                        <option> Marital status </option>
+                                                        <option>Married</option>
+                                                        <option>Unmarried</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-12">
+                                                    <select class="form-control form-select">
+                                                        <option>Sex</option>
+                                                        <option>Male</option>
+                                                        <option>Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-12">
+                                                    <select class="form-control form-select">
+                                                        <option>Blood Group</option>
+                                                        <option>A+</option>
+                                                        <option>A-</option>
+                                                        <option>B+</option>
+                                                        <option>B-</option>
+                                                        <option>O+</option>
+                                                        <option>O-</option>
+                                                        <option>AB+</option>
+                                                        <option>AB-</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-4"></div>
+                                        <div class="col-xl-4">
+                                            <div class="form-group row">
+                                                <div class="col-lg-12">
+                                                    <input type="text" class="form-control" placeholder="Patient Weight">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <div class="form-group row">
+                                                <div class="col-lg-12">
+                                                    <input type="text" class="form-control" placeholder="Patient Height">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-4">
+                                            <div class="form-group">
+                                                <div class="col-lg-12">
+                                                </div>
+                                                <textarea class="form-control" placeholder="Address" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-8">
+                                            <div class="form-group">
+                                                <textarea class="form-control" placeholder="Patient History" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal -->
+
+
+    <!-- JQuery v3.5.1 -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- popper js -->
+    <script src="assets/plugins/popper/popper.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Moment -->
+    <script src="assets/plugins/moment/moment.min.js"></script>
+
+    <!-- Date Range Picker -->
+    <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Datatable -->
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/init-tdatatable.js"></script>
+
+    <!-- Main Custom JQuery -->
+    <script src="assets/js/toggleFullScreen.js"></script>
+    <script src="assets/js/main.js"></script>
+
+{% endblock %}
