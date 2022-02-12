@@ -25,6 +25,18 @@ def all_patients(request):
 def new_appointment(request):
     return render(request, 'new-appointment.html')
 
+def create_invoice(request):
+    return render(request, 'create-invoice.html')
+
+def billing(request):
+    return render(request, 'billing-list.html')
+
+def doctor_settings(request):
+    return render(request, 'doctor-settings.html')
+
+def Patient_dashboard(request):
+    return render(request, 'patientdashboard.html')
+
 def doctor_list(request):
     doctor = Doctor.objects.all()
     context = {'doctor': doctor}
@@ -36,3 +48,12 @@ def doctor_profile(request, id):
     context = {'doctor': doctor, 'doctor_profile': doctor_profile}
 
     return render(request, 'doctor-profile.html', context)
+
+def appointment(request):
+    return render(request, 'appointment.html')
+
+def appointment_form(request):
+    return render(request, 'appointment-form.html')
+
+def patient_settings(request):
+    return render(request, 'patient-settings.html')
