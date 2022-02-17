@@ -1,0 +1,182 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+        <!-- start section content -->
+        <div class="content-body">
+            <div class="warper container-fluid">
+                <div class="doctorino_settings main_container">
+                    <div class="row page-titles mx-0">
+                        <div class="col-sm-6 p-md-0">
+                            <div class="welcome-text">
+                                <h4 class="text-primary">Doctor Settings</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active"><a href="/doctor-settings.html">Doctor Settings</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header">
+                                    <h4 class="card-title"> Doctor Settings </h4>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                            <div class="row">
+                                                <div class="col-xl-4">
+                                                    <div class="form-group row widget-3">
+                                                        <div class="col-lg-10">
+                                                            <div class="form-input">
+                                                                <label class="labeltest" for="file-ip-1">
+                                                                    <span> click to upload image </span>
+                                                                </label>
+                                                                <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+                                                                <div class="preview">
+                                                                    <img id="file-ip-1-preview" src="#" alt="img">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Title (ex. Dr)">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Address">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Hospital Name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" placeholder="Email">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Mobile No.">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4">
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select class="form-control form-select">
+                                                            <option> status </option>
+                                                            <option>on</option>
+                                                            <option>Off</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select class="form-control form-select">
+                                                            <option>District</option>
+                                                            <option>Morang</option>
+                                                            <option>Jhapa</option>
+                                                            <option>Dhankuta</option>
+                                                            <option>Sunsari</option>
+                                                            <option>Saptari</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select class="form-control form-select">
+                                                            <option>Specialist</option>
+                                                            <option>Cardiologist</option>
+                                                            <option>Dermatologists</option>
+                                                            <option>Colon and Rectal Surgeons</option>
+                                                            <option>Anesthesiologists</option>
+                                                            <option>Allergists/Immunologists</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Saturday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" class="form-control"></div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"><input type="time" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Sunday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"><input type="time" class="form-control"></div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Monday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" value="08:00" class="form-control"></div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" value="17:00" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Tuesday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" value="08:00" class="form-control"></div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" value="17:00" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Wednseday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="time" value="08:00" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"><input type="time" value="17:00" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Thurday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"><input type="time" value="08:00" class="form-control"></div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"> <input type="time" value="17:00" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 col-md-3 col-form-label">Friday</label>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="time" value="08:00" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4">
+                                                <div class="form-group"><input type="time" value="17:00" class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-11">
+                                                <div class="form-group"><button type="submit" class="btn btn-primary float-end">Save</button></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End section content -->
+
+
+{% endblock %}      

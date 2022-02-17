@@ -4,35 +4,6 @@ from django.contrib import  messages
 from django.contrib.auth import authenticate, login
 from .models import Doctor
 
-def user_login(request):
-    return render(request, 'Login.html')
-
-def user_register(request):
-    return render(request, 'patient-register.html')
-
-def doctor_register(request):
-    return render(request, 'doctor-register.html')
-
-def doctor_dashboard(request):
-    return render(request, 'doctor-dashboard.html')
-
-def new_patient(request):
-    return render(request, 'new-patient.html')
-
-def all_patients(request):
-    return render(request, 'all-patients.html')
-
-def new_appointment(request):
-    return render(request, 'new-appointment.html')
-
-def create_invoice(request):
-    return render(request, 'create-invoice.html')
-
-def billing(request):
-    return render(request, 'billing-list.html')
-
-def doctor_settings(request):
-    return render(request, 'doctor-settings.html')
 
 def Patient_dashboard(request):
     return render(request, 'patientdashboard.html')
@@ -57,3 +28,32 @@ def appointment_form(request):
 
 def patient_settings(request):
     return render(request, 'patient-settings.html')
+
+# def appointment_form(request):
+#     if check_admin(request.user):
+#         if request.method=="POST":  #if form is submitted
+#             appointmentForm = AdminAppointmentForm(request.POST)
+#             if appointmentForm.is_valid():
+#                 docid=appointmentForm.cleaned_data.get('doctor')    #get doctor id
+#                 patid=appointmentForm.cleaned_data.get('patient')   #get patient id
+#                 doc = Doctor.objects.all().filter(id=docid).first() #get doctor
+#                 pat = Patient.objects.all().filter(id=patid).first()#get patient
+#                 if check_avail(doc,appointmentForm.cleaned_data.get('calldate'),appointmentForm.cleaned_data.get('calltime')):  #check if appointment is available during that slot
+#                     app = Appointment(patient=pat,doctor=doc,
+#                                     description=appointmentForm.cleaned_data.get('description'),
+#                                     calldate=appointmentForm.cleaned_data.get('calldate'),
+#                                     calltime=appointmentForm.cleaned_data.get('calltime'),
+#                                     status=True)    #create new appointment
+#                     app.save()
+#                     return redirect('bookapp_adm.html')
+#                 else:   #if slot is not available, display error
+#                     appointmentForm.add_error('calltime', 'Slot Unavailable.')
+#                     return render(request,'hospital/Admin/bookapp_adm.html',{'appointmentForm': appointmentForm})
+#             else:
+#                 print(appointmentForm.errors)
+#         else:
+#             appointmentForm = AdminAppointmentForm()
+#         return render(request,'hospital/Admin/bookapp_adm.html',{'appointmentForm': appointmentForm})
+#     else:
+#         auth.logout(request)
+#         return redirect('login_adm.html')

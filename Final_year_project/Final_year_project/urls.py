@@ -20,9 +20,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('', include('accounts.urls')),
     path('admin/', admin.site.urls),
-    path('', include('Management_system.urls')),
-    path('account/', include('accounts.urls')),
+    path('doctor/', include(('doctor.urls', 'doctor'), namespace='doctor')),
+    path('patient/', include(('Management_system.urls', 'Management_system'), namespace='patient')),
+    
+    # path('social-auth/', include('social_django.urls', namespace='social')),
    
 ]
 

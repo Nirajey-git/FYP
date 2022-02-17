@@ -43,10 +43,19 @@ class Doctor(models.Model):
 
     
 class Appointment(models.Model):
-    appointment_time = models.DateTimeField(auto_now_add=True)
+    progress_state = [("Pending", "Pending"), ("In Progress", "In Progress"),
+                      ("Waiting for receiver", "Waiting for receiver"), ("Delivered", "Delivered")]
+    
+    name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=100, unique=True)
+    address = models.CharField(max_length=50, default='Itahari')
+    phone_number = models.IntegerField()
+    sex = models.CharField(max_length=200)
+    appointment_date = models.DateField(default='2000-01-01')
+    appointment_time = models.TimeField(auto_now=False, auto_now_add=False)
+    progress = models.CharField(max_length=50, choices=progress_state, default='Pending')
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='appointment_patient')
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='appointment_doctor')
-    venue = models.CharField(max_length=50,choices=venue,default='Itahari')
 
 class History(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='patient_diseases')

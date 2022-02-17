@@ -1,0 +1,125 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="content-body">
+    <div class="warper container-fluid">
+        <div class="doctorino_settings main_container">
+            <div class="row page-titles mx-0">
+                <div class="col-sm-6 p-md-0">
+                </div>
+                <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card shadow mb-4">
+                        <div class="card-header">
+                            <h4 class="card-title">Appointment </h4>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label">Name
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" placeholder="Niraj">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label">Email<span
+                                                    class="text-danger">*</span></label>
+                                            <div class="col-lg-6">
+                                                <input type="Email" class="form-control" placeholder="nirazgajurel@gmail.com">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label">Address <span
+                                                    class="text-danger">*</span></label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" placeholder="Dharan">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label">Phone<span
+                                                    class="text-danger">*</span></label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" placeholder="212658543469">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label">Sex</label>
+                                            <div class="col-lg-6">
+                                                <select class="form-control form-select">
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                    <option>Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label">Date</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control datepicker" name="date_requested" >
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label">Time</label>
+                                            <div class="col-lg-6">
+                                                <select class="form-control form-select">
+                                                    <option>9:00 AM</option>
+                                                    <option>9:15 AM</option>
+                                                    <option>9:30 AM</option>
+                                                    <option>9:45 AM</option>
+                                                    <option>10:00 AM</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <hr>
+                                    <h3>Payment Method</h3>
+                                    <hr>
+                                    <div class="clearfix">
+                                        <input id="formcheckoutRadio4" value="" name="radio2" type="radio" class="radio" checked="checked">
+                                        <label for="formcheckoutRadio4">Khalti</label>
+                                    </div>
+                                    <div class="clearfix">
+                                        <input id="formcheckoutRadio5" value="" name="radio2" type="radio" class="radio">
+                                        <label for="formcheckoutRadio5">esewa</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-11">
+                                        <div class="form-group"><button type="submit" class="btn btn-primary float-end">Book Appointment</button></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End section content -->
+
+{% endblock %}        
